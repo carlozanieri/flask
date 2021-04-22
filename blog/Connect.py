@@ -42,7 +42,7 @@ from tornado.websocket import WebSocketHandler
 from tornado.options import define, options
 class Connect:
 
-    define("mysql_host", default="carlozanieri.net", help="prolocogest database host")
+    define("mysql_host", default="linuxmugello.net", help="prolocogest database host")
     define("mysql_database", default="prolocogest", help="prolocogest database name")
     define("mysql_user", default="root", help="prolocogest database user")
     define("mysql_password", default="trex39", help="prolocogest database password")
