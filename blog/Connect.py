@@ -123,7 +123,7 @@ class Connect:
         return primanota
 
     def conta(self, datada,dataa):
-        db = MySQLdb.connect(options.mysql_host, options.mysql_user, options.mysql_password, options.mysql_database)
+        db = pymysql.connect(options.mysql_host, options.mysql_user, options.mysql_password, options.mysql_database)
         #db = pymysql.connect(options.mysql_host, options.mysql_user, options.mysql_password, options.mysql_database, cursorclass=pymysql.cursors.DictCursor)
         cursor = db.cursor()
         cursor.execute("SELECT *  from primanota where data >='" + datada + "' and data <='" + dataa + "'" + " order by data")
@@ -136,7 +136,7 @@ class Connect:
 
     def menu(self):
 
-        db = MySQLdb.connect(options.mysql_host, options.mysql_user, options.mysql_password, options.mysql_database)
+        db = pymysql.connect(options.mysql_host, options.mysql_user, options.mysql_password, options.mysql_database)
 
         cursor = db.cursor()
         cursor.execute("SELECT *  from menuweb where livello=2")
@@ -147,7 +147,7 @@ class Connect:
 
     def submenu(self, menu):
 
-        db = MySQLdb.connect(options.mysql_host, options.mysql_user, options.mysql_password, options.mysql_database)
+        db = pymysql.connect(options.mysql_host, options.mysql_user, options.mysql_password, options.mysql_database)
         ##print(menu)
         cursor = db.cursor()
         cursor.execute("SELECT *  from menuweb where livello=3 and radice = '" + menu + "'")
@@ -157,7 +157,7 @@ class Connect:
         return submenu
     def submnu(self):
 
-        db = MySQLdb.connect(options.mysql_host, options.mysql_user, options.mysql_password, options.mysql_database)
+        db = pymysql.connect(options.mysql_host, options.mysql_user, options.mysql_password, options.mysql_database)
         ##print(menu)
         cursor = db.cursor()
         cursor.execute("SELECT *  from menuweb where livello=3 ")
