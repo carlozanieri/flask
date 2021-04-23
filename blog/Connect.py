@@ -16,7 +16,7 @@ from smtplib import SMTP, SMTPException
 # *******
 import bcrypt
 import concurrent.futures
-#import MySQLdb
+import MySQLdb
 import markdown
 import pymysql
 import os.path
