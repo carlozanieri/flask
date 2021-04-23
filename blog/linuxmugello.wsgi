@@ -9,4 +9,4 @@ with open(activate_this) as f:
     sys.path.insert(0, '/home/carlo/flask')
     sys.path.insert(0, '/home/carlo/flask/blog')
 
-   from flask import blog as application
+   from linuxmugello import app as application
